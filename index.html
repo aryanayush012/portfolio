@@ -3,1206 +3,469 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
-
-  <!--
-    - favicon
-  -->
+  <title>Ayush Aryan — Frontend Engineer</title>
+  <meta name="description" content="Ayush Aryan — frontend SDE at CarTrade Tech (CarWale &amp; BikeWale) building design systems, React/TypeScript components and LLM-powered interfaces.">
+  <meta name="theme-color" content="#1F2F2B">
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Sora:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- apply saved theme before paint to avoid a flash -->
+  <script>try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
 </head>
 
 <body>
 
-  <main>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <!--
-      - #SIDEBAR
-    -->
+  <!-- ambient background -->
+  <div class="aurora" aria-hidden="true">
+    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"></div>
 
-    <aside class="sidebar" data-sidebar>
+  <!-- NAV -->
+  <header class="nav-wrap">
+    <nav class="nav glass" aria-label="Primary">
+      <a href="#top" class="nav-logo" aria-label="Back to top">AA</a>
+      <ul class="nav-list" data-nav>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#work" class="nav-link">Work</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#certificates" class="nav-link">Cert<span class="hide-sm">ificate</span>s</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <span class="nav-indicator" aria-hidden="true"></span>
+      </ul>
+      <button class="theme-btn" data-theme-toggle aria-label="Toggle light and dark theme">
+        <ion-icon name="moon-outline" class="i-moon"></ion-icon>
+        <ion-icon name="sunny-outline" class="i-sun"></ion-icon>
+      </button>
+    </nav>
+  </header>
 
-      <div class="sidebar-info">
+  <main id="main">
 
-        <figure class="avatar-box">
-          <img src="./assets/images/dp.png" alt="Ayush Aryan" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Ayush Aryan">Ayush Aryan</h1>
-
-          <p class="title">Software developer</p>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-text">
+        <p class="hello">Hi, I'm</p>
+        <h1 class="hero-name" data-split aria-label="Ayush Aryan">Ayush Aryan</h1>
+        <p class="hero-role">
+          I build <span class="typed" data-typed='["design systems that scale","React &amp; TypeScript UIs","LLM-powered interfaces","interfaces that feel alive"]'></span><span class="caret" aria-hidden="true"></span>
+        </p>
+        <p class="hero-lede">
+          Frontend SDE 1 at CarTrade Tech, building the design system and UI behind CarWale and BikeWale — from MUI theming to ChatGPT-powered car discovery.
+        </p>
+        <div class="hero-cta">
+          <a href="#work" class="btn btn-primary">
+            <span>View projects</span>
+          </a>
+          <button class="btn btn-ghost" data-download>
+            <span class="dl-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" class="dl-arrow"><path d="M12 4v12M6 11l6 6 6-6" /></svg>
+              <svg viewBox="0 0 24 24" class="dl-check"><path d="M5 12l5 5 9-10" /></svg>
+            </span>
+            <span class="dl-label">Download resume</span>
+          </button>
         </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
+        <ul class="hero-social">
+          <li><a href="https://github.com/aryanayush012" aria-label="GitHub" target="_blank" rel="noopener"><ion-icon name="logo-github"></ion-icon></a></li>
+          <li><a href="https://www.linkedin.com/in/aryanayush012/" aria-label="LinkedIn" target="_blank" rel="noopener"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          <li><a href="mailto:aryanayush012@gmail.com" aria-label="Email"><ion-icon name="mail-outline"></ion-icon></a></li>
+        </ul>
       </div>
 
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:richard@example.com" class="contact-link">aryanayush012@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+91 7808936924" class="contact-link">+91 7808936924</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">April 01, 2001</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Bhopal, Madhya Pradesh, India</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/ayush-aryan-8305861a2/" class="social-link">
-              <ion-icon name="logo-Linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://github.com/aryanayush012" class="social-link">
-              <ion-icon name="logo-Github"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.facebook.com/ayush.aryan.90834/" class="social-link">
-              <ion-icon name="logo-Facebook"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Projects</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Certificates</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            I'm a Computer Science and Engineering student. I have a strong passion for coding and have expertise in programming languages such as C++, DSA.
-            <br>
-             As an avid coder, I have completed numerous coding challenges on platforms such as Hackerrank, LeetCode, GeeksforGeeks, Codeforces, and Codechef.
-             <br>
-              I am proficient in full-stack development and have designed and developed several web applications, including a weather forecasting website and a secure user authentication system.
-              <br>
-               I am also an active open-source contributor and have participated in Hacktoberfest 2022.
-               <br>
-              Browse through my portfolio to see my work and get in touch to collaborate on exciting projects.
-          </p>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">Coding Profile</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-              
-              <div class="service-icon-box">
-                <img src="./assets/images/leetcode.png" alt="design icon" width="40">
-              </div>
-              <a href="https://leetcode.com/aryanayush012/">
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Leetcode</h4>
-
-                <p class="service-item-text">
-                  (solved 212 easy, 257 medium, and 33 hard questions). Contest Rating 1,700.
-                </p>
-              </div>
-            </a>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/gfg.png" alt="Web development icon" width="40">
-              </div>
-              <a href="https://auth.geeksforgeeks.org/user/aryanayush012/practice/">
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">GeeksforGeeks</h4>
-
-                <p class="service-item-text">
-                  (solved 117 easy, 114 medium, 17 hard questions. Overall Coding Score: 861).
-                </p>
-              </div>
-              </a>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/codeforces.png" alt="mobile app icon" width="40">
-              </div>
-              <a href="https://codeforces.com/profile/aryanayush012">
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Codeforces</h4>
-
-                <p class="service-item-text">
-                  Contest rating: 947 (newbie).
-                </p>
-              </div>
-              </a>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/codechef.png" alt="camera icon" width="40">
-              </div>
-              <a href="https://www.codechef.com/users/ayusharyan">
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Codechef</h4>
-
-                <p class="service-item-text">
-                  Secured Global rank 127 in Codechef Starters 49 (div-4)
-                </p>
-              </div>
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-
-        <!--
-          - clients
-        -->
-
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Skills</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/cpp.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/html.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/css.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/javascript.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/nodejs.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/express.png" alt="client logo">
-              </a>
-            </li>
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/ejs.png" alt="client logo">
-              </a>
-            </li>
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/bootstrap.png" alt="client logo">
-              </a>
-            </li>
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/jquery.png" alt="client logo">
-              </a>
-            </li>
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/react.png" alt="client logo">
-              </a>
-            </li>
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/database.png" alt="client logo">
-              </a>
-            </li>
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/git.png" alt="client logo">
-              </a>
-            </li>
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/github.png" alt="client logo">
-              </a>
-            </li>
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/dsa.png" alt="client logo">
-              </a>
-            </li>
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/dbms.png" alt="client logo">
-              </a>
-            </li>
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/oops.png" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-          <span>
-            <div class="btn-circle-download">
-              <svg id="arrow" width="14px" height="20px" viewBox="17 14 14 20">
-                <path d="M24,15 L24,32"></path>
-                <polyline points="30 27 24 33 18 27"></polyline>
-              </svg>
-              <svg id="check" width="21px" height="15px" viewBox="13 17 21 15">
-                <polyline points="32.5 18.5 20 31 14.5 25.5"></polyline>
-              </svg>
-              <svg  id="border" width="48px" height="48px" viewBox="0 0 48 48">
-                <path d="M24,1 L24,1 L24,1 C36.7025492,1 47,11.2974508 47,24 L47,24 L47,24 C47,36.7025492 36.7025492,47 24,47 L24,47 L24,47 C11.2974508,47 1,36.7025492 1,24 L1,24 L1,24 C1,11.2974508 11.2974508,1 24,1 L24,1 Z"></path>
-              </svg>
-            </div>
-          </span>
-        </header>
-        
-
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
+      <div class="hero-visual">
+        <div class="code-card glass" data-hero-card>
+          <div class="code-head">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="code-file">ayush.js</span>
           </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Lakshmi Narain College Of Technology & Science</h4>
-
-              <span>2020 - 2024</span>
-
-              <p class="timeline-text">
-                Bachelor Of Technology In Computer Science & Engineering- Artificial Intelligence and Machine Learning
-                CGPA: 9.19/10.0
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Sri Chaitanya Vidyaniketan</h4>
-
-              <span>2017 - 2019</span>
-
-              <p class="timeline-text">
-                Higher Secondary School (CBSE)
-                Percentage: 79.60%
-
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Bal Mandir Senior Secondary School</h4>
-
-              <span>2014 - 2017</span>
-
-              <p class="timeline-text">
-                Secondary School (CBSE)
-                CGPA: 10.0/10.0
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Subject Matter Expert Intern</h4>
-
-              <span>2022 - 2022</span>
-
-              <p class="timeline-text">
-                Quesba Edutech Private Limited
-                Proposed Solution Of 50+ Questions on C++ and Data Structures and Algorithms
-                Managed All the Answers to Pass Quality Check with 100% accuracy
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Hacktoberfest</h4>
-
-              <span>2022</span>
-
-              <p class="timeline-text">
-                Successfully Completed 4 pull and merge requests in remote repositories
-                contributed in 5+ repositories including C/C++, DSA and web development
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">C++</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Data Structures and Algorithms</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Full Stack development</h5>
-                <data value="60">60%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Technical Subjects(OOPM,DBMS)</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="Projects" data-page="projects">
-
-        <header>
-          <h2 class="h2 article-title">Projects</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>frontend</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>full-stack</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>other</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>frontend</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>full-stack</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>other</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-            <li class="project-item  active" data-filter-item data-category="full-stack">
-              <a href="https://cred-wallet.onrender.com">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project12.png.png" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Cred-Wallet</h3>
-
-                <p class="project-category">full-stack</p>
-
-              </a>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="full-stack">
-              <a href="https://i-notebook-r90p.onrender.com">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project11.png.png" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">I-Notebook</h3>
-
-                <p class="project-category">full-stack</p>
-
-              </a>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="frontend">
-              <a href="https://text-utils-5xt4.onrender.com/">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project10.png.png" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Text-Utils</h3>
-
-                <p class="project-category">frontend</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="frontend">
-              <a href="https://keeper-app-xyuu.onrender.com/">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.png" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">keeper</h3>
-
-                <p class="project-category">frontend</p>
-
-              </a>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="frontend">
-              <a href="https://aryanayush012.github.io/tin-dog/">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">tindog</h3>
-
-                <p class="project-category">frontend</p>
-
-              </a>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="frontend">
-              <a href="https://aryanayush012.github.io/Drum-Play/">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.png" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Drumkit</h3>
-
-                <p class="project-category">frontend</p>
-
-              </a>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="frontend">
-              <a href="https://aryanayush012.github.io/Dice-game/">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Dice</h3>
-
-                <p class="project-category">frontend</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="full-stack">
-              <a href="https://weather-cock.onrender.com/">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/weather.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Weather-Cock</h3>
-
-                <p class="project-category">full-stack</p>
-
-              </a>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="full-stack">
-              <a href="https://authentication-5j29.onrender.com/">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/authentication.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Authentication</h3>
-
-                <p class="project-category">full-stack</p>
-
-              </a>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="full-stack">
-              <a href="https://newsletter-signup-r6r1.onrender.com">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/newsletter.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Newsletter-Signup</h3>
-
-                <p class="project-category">full-stack</p>
-
-              </a>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="full-stack">
-              <a href="https://to-do-list-ni5b.onrender.com">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/todo.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">to-do-list</h3>
-
-                <p class="project-category">full-stack</p>
-
-              </a>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="full-stack">
-              <a href="https://blog-website-d0yh.onrender.com">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/blog.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Blog-website</h3>
-
-                <p class="project-category">full-stack</p>
-
-              </a>
-            </li>
-
-            <!-- <li class="project-item  active" data-filter-item data-category="other">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">other</p>
-
-              </a>
-            </li> -->
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #CERTIFICATES
-      -->
-
-      <article class="Certificates" data-page="certificates">
-
-        <header>
-          <h2 class="h2 article-title">Certificates</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            
-            <li class="blog-post-item">
-              <a href="https://drive.google.com/file/d/12KGMY2wj78EvhsFMpksQUBqeT8x7BILO/view?usp=sharing">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.png" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">TCS NQT - IT</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Apr 27, 2023</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">TCS National Qualifier Test</h3>
-
-                  <p class="blog-text">
-                    One Test, Thousands of Jobs
-in TCS, Jio, TVS, Asian Paints and more
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="https://drive.google.com/file/d/1nBNpyHlAJfZPWZGsjuwv4-3u9KCkfsWG/view?usp=sharing">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.png" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Cisco Networking Academy</p>
-
-                    <span class="dot"></span>
-                    
-                    <time datetime="2022-02-23">Mar 03, 2023</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Introduction to Packet Tracer</h3>
-
-                  <p class="blog-text">
-                    For completing the Cisco Networking Academy® Introduction to Packet Tracer course.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-            
-            <li class="blog-post-item">
-              <a href="https://drive.google.com/file/d/1Z8QsDTx9DjygfGWO6I_axRBxqmEYnX8X/view?usp=sharing">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.png" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Cisco Networking Academy</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Dec 20, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">ntroduction to Networks</h3>
-
-                  <p class="blog-text">
-                    successfully achieved student level credential for completing CCNAv7: Introduction to Networks course
-administered by the undersigned instructor
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="https://smartinternz.com/internships/salesforce_certificates/bcfaf6aa2ba8e45ff2d75a8071f0d8da">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.png" alt="Salesforce Developer Virtual Internship
-                  " loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Salesforce</p>
-
-                    <span class="dot"></span>
-                    
-                    <time datetime="2022-02-23">October-December 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Salesforce Developer Virtual Internship
-                  </h3>
-                  
-                  <p class="blog-text">
-                    completed the various Salesforce Trailhead modules like Salesforce Fundamentals,Organizational 
-                    Setup and got super badges like Apex Specialist,Process Automation Specialist
-                  </p>
-                  
-                </div>
-                
-              </a>
-            </li>
-            
-            <li class="blog-post-item">
-              <a href="https://www.hackerrank.com/certificates/dc96dcdce03b">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Python</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Jul 30 -2021</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Achieved Python (Basic) Certificate in 2021</h3>
-
-                  <p class="blog-text">
-                    It covers topics like Scalar Types, Operators and Control Flow, Strings, Collections and Iteration, Modularity, Objects and Types and Classes
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-            
-            <li class="blog-post-item">
-              <a href="https://www.hackerrank.com/certificates/2074bdbe4756">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.png" alt="Problem Solving Basics" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">DSA</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Aug 03, 2021</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Achieved Problem Solving Certificate in 2021</h3>
-
-                  <p class="blog-text">
-                    It covers basic topics of Data Structures (such as Arrays, Strings) and Algorithms (such as Sorting and Searching).
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d916.4442248727067!2d77.52394657622933!3d23.25120424600128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c4244c97d6f29%3A0x72457a4e85fd116c!2sLNCT%20Group%20of%20Colleges!5e0!3m2!1sen!2sin!4v1685386293371!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+          <pre class="code" aria-label="A JavaScript object describing Ayush"><code data-code></code></pre>
+          <figure class="avatar float">
+            <img src="./assets/images/dp.png" alt="Portrait of Ayush Aryan" width="96" height="96">
           </figure>
-        </section>
+          <span class="status"><i></i>Open to work</span>
+        </div>
+      </div>
 
-        <section class="contact-form">
+      <a href="#about" class="scroll-hint" aria-label="Scroll to about"><span></span></a>
+      <div class="floor" aria-hidden="true"></div>
+    </section>
 
-          <h3 class="h3 form-title">Contact Form</h3>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <h3 class="sub-title" data-reveal>About me</h3>
 
-          <form action="https://formsubmit.co/aryanayush012@gmail.com" method="POST" class="form" data-form>
+      <div class="about-grid">
+        <div class="glass panel about-text" data-reveal>
+          <p>I'm a frontend-focused engineer with 2 years of product engineering at CarTrade Tech, where I work on CarWale and BikeWale. I specialise in design system architecture, React/TypeScript components and LLM integration.</p>
+          <p>I led the MUI integration into our component monorepo and built a Theme System with 100% design compliance, automated Figma-to-React component creation (85% faster), and engineered CarWale's ChatGPT integration for millions of users.</p>
+          <p>Outside work I solve problems on LeetCode (top 8% globally) and contribute to open source. I'm looking for high-ownership frontend roles in product-first teams.</p>
+        </div>
 
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+        <ul class="stats" data-reveal>
+          <li class="glass stat"><strong data-count="2" data-decimals="1" >0</strong><span>years building product UI</span></li>
+          <li class="glass stat"><strong data-count="1782">0</strong><span>LeetCode max rating, top 8%</span></li>
+          <li class="glass stat"><strong data-count="80" data-suffix="+">0</strong><span>design-system components versioned</span></li>
+          <li class="glass stat"><strong data-count="85" data-suffix="%">0</strong><span>faster component creation</span></li>
+        </ul>
+      </div>
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+      <h3 class="sub-title" data-reveal>Coding profiles</h3>
+      <ul class="profiles">
+        <li data-reveal>
+          <a class="glass profile" href="https://leetcode.com/aryanayush012/" target="_blank" rel="noopener">
+            <img src="./assets/images/leetcode.png" alt="" width="44" height="44">
+            <div>
+              <h4>LeetCode</h4>
+              <p>500+ problems solved. Max rating 1,782, top 8% globally.</p>
             </div>
+            <ion-icon name="arrow-up-outline" class="go"></ion-icon>
+          </a>
+        </li>
+        <li data-reveal>
+          <a class="glass profile" href="https://auth.geeksforgeeks.org/user/aryanayush012/practice/" target="_blank" rel="noopener">
+            <img src="./assets/images/gfg.png" alt="" width="44" height="44">
+            <div>
+              <h4>GeeksforGeeks</h4>
+              <p>240+ problems solved. Overall score 861.</p>
+            </div>
+            <ion-icon name="arrow-up-outline" class="go"></ion-icon>
+          </a>
+        </li>
+        <li data-reveal>
+          <a class="glass profile" href="https://codeforces.com/profile/aryanayush012" target="_blank" rel="noopener">
+            <img src="./assets/images/codeforces.png" alt="" width="44" height="44">
+            <div>
+              <h4>Codeforces</h4>
+              <p>Max rating 947.</p>
+            </div>
+            <ion-icon name="arrow-up-outline" class="go"></ion-icon>
+          </a>
+        </li>
+        <li data-reveal>
+          <a class="glass profile" href="https://www.codechef.com/users/ayusharyan" target="_blank" rel="noopener">
+            <img src="./assets/images/codechef.png" alt="" width="44" height="44">
+            <div>
+              <h4>CodeChef</h4>
+              <p>Global rank 127 in CodeChef Starters 49 (Div 4).</p>
+            </div>
+            <ion-icon name="arrow-up-outline" class="go"></ion-icon>
+          </a>
+        </li>
+      </ul>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+      <h3 class="sub-title" data-reveal>Technical skills</h3>
+      <ul class="bubbles" data-bubbles data-reveal aria-label="Technical skills">
+          <li class="bubble" tabindex="0" style="--size:118;--i:0" data-name="React" aria-label="React"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:104;--i:1" data-name="TypeScript" aria-label="TypeScript"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:104;--i:2" data-name="React Native" aria-label="React Native"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactnative/reactnative-original.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:100;--i:3" data-name="JavaScript" aria-label="JavaScript"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:96;--i:4" data-name="Next.js" aria-label="Next.js"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:96;--i:5" data-name="Material UI" aria-label="Material UI"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:94;--i:6" data-name="LLM" aria-label="LLM"><ion-icon name="sparkles-outline"></ion-icon></li>
+          <li class="bubble" tabindex="0" style="--size:88;--i:7" data-name="MCP" aria-label="MCP"><img class="mono" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/modelcontextprotocol.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:86;--i:8" data-name="Node.js" aria-label="Node.js"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:80;--i:9" data-name="Expo" aria-label="Expo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expo/expo-original.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:80;--i:10" data-name="Redux Toolkit" aria-label="Redux Toolkit"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:78;--i:11" data-name="HTML" aria-label="HTML"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:78;--i:12" data-name="CSS" aria-label="CSS"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:78;--i:13" data-name="Figma" aria-label="Figma"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:76;--i:14" data-name="SCSS" aria-label="SCSS"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:74;--i:15" data-name="Core Web Vitals" aria-label="Core Web Vitals"><ion-icon name="speedometer-outline"></ion-icon></li>
+          <li class="bubble" tabindex="0" style="--size:72;--i:16" data-name="Styled Components" aria-label="Styled Components"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/styledcomponents/styledcomponents-original.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:72;--i:17" data-name="Webpack" aria-label="Webpack"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webpack/webpack-original.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:72;--i:18" data-name="C++" aria-label="C++"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:70;--i:19" data-name="Express.js" aria-label="Express.js"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:70;--i:20" data-name="Jest" aria-label="Jest"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:70;--i:21" data-name="Git" aria-label="Git"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:70;--i:22" data-name="GitHub" aria-label="GitHub"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:68;--i:23" data-name="SQL" aria-label="SQL"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:68;--i:24" data-name="Jenkins" aria-label="Jenkins"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:64;--i:25" data-name="Lerna" aria-label="Lerna"><img class="mono" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/lerna.svg" alt="" loading="lazy" width="48" height="48"></li>
+          <li class="bubble" tabindex="0" style="--size:62;--i:26" data-name="Husky" aria-label="Husky"><ion-icon name="paw-outline"></ion-icon></li>
+      </ul>
+    </section>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
+    <!-- WORK -->
+    <section class="section" id="work">
+      <h3 class="sub-title" data-reveal>Selected work</h3>
 
-          </form>
+      <div class="filters glass" role="group" aria-label="Filter projects" data-reveal>
+        <button class="filter active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="professional" aria-pressed="false">Professional</button>
+        <button class="filter" data-filter="personal" aria-pressed="false">Personal</button>
+        <span class="filter-indicator" aria-hidden="true"></span>
+      </div>
 
-        </section>
+      <ul class="projects" data-projects>
+        <li class="project featured" data-category="personal" data-reveal>
+          <a href="https://park-next.in/" class="glass card" target="_blank" rel="noopener" data-tilt="3">
+            <figure><img src="./assets/images/parknext.jpg" alt="ParkNext landing page" loading="lazy"></figure>
+            <div class="feat-text">
+              <p class="feat-label">Personal project, live</p>
+              <h3>ParkNext</h3>
+              <p class="card-desc">An hourly parking marketplace. Drivers find free spaces on a live map, book now or ahead, and arrive with a 4-digit code. Hosts earn from empty spaces, with no commission.</p>
+              <ul class="tags"><li>React Native</li><li>Supabase</li><li>Expo</li><li>Google Maps</li></ul>
+              <span class="feat-link"><ion-icon name="open-outline"></ion-icon>Visit park-next.in</span>
+            </div>
+          </a>
+        </li>
+        <li class="project featured" data-category="personal" data-reveal>
+          <a href="https://cred-wallet-2-0.vercel.app/" class="glass card" target="_blank" rel="noopener" data-tilt="3">
+            <figure><img src="./assets/images/credwallet.jpg" alt="Cred-Wallet landing page" loading="lazy"></figure>
+            <div class="feat-text">
+              <p class="feat-label">Personal project, live</p>
+              <h3>Cred-Wallet</h3>
+              <p class="card-desc">A secure digital vault for credit and debit cards. Store, edit and organise cards, with automatic card-type detection and JWT-protected accounts.</p>
+              <ul class="tags"><li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>JWT</li></ul>
+              <span class="feat-link"><ion-icon name="open-outline"></ion-icon>Visit Cred-Wallet</span>
+            </div>
+          </a>
+        </li>
+        <li class="project" data-category="professional" data-reveal>
+          <a href="https://oxygen.cwsystem.in/v2/" class="glass card work" target="_blank" rel="noopener" data-tilt="6">
+            <figure class="art" aria-hidden="true"><ion-icon name="color-wand-outline"></ion-icon><strong>60–70%</strong><span>less UI effort</span></figure>
+            <div class="card-body"><h3>Design to code</h3><p>CarTrade Tech</p></div>
+            <p class="card-desc">Designers build in Figma; developers call the tooling through an LLM like Claude and get the full page slug in one go, with no manual UI fixes. Built on a custom wrapper over MUI, it hits 85–90% accuracy and is used across the company.</p>
+            <ul class="tags"><li>Figma</li><li>MUI</li><li>LLM tooling</li><li>React</li></ul>
+            <span class="work-link"><ion-icon name="open-outline"></ion-icon>View Oxygen v2</span>
+          </a>
+        </li>
+        <li class="project" data-category="professional" data-reveal>
+          <article class="glass card work" data-tilt="6">
+            <figure class="art" aria-hidden="true"><ion-icon name="phone-portrait-outline"></ion-icon><strong>85–90%</strong><span>design-to-code accuracy</span></figure>
+            <div class="card-body"><h3>React Native component library</h3><p>CarTrade Tech</p></div>
+            <p class="card-desc">An MUI-style component library for React Native, which didn't exist anywhere before. Written from scratch, including the structure, theme, palette and components, and wired into the same design-to-code flow.</p>
+            <ul class="tags"><li>React Native</li><li>Design systems</li><li>Theming</li><li>LLM tooling</li></ul>
+          </article>
+        </li>
+        <li class="project" data-category="professional" data-reveal>
+          <a href="https://chatgpt.com/plugins/plugin_asdk_app_69a804be51c081918b68832b1ae53c77?plugin_detail_origin=inline_selection_pill" class="glass card work" target="_blank" rel="noopener" data-tilt="6">
+            <figure class="art" aria-hidden="true"><ion-icon name="sparkles-outline"></ion-icon><strong>Millions</strong><span>of users reached</span></figure>
+            <div class="card-body"><h3>CarWale ChatGPT integration</h3><p>CarTrade Tech</p></div>
+            <p class="card-desc">Built the interface layer between OpenAI's LLM and live automotive inventory, powering real-time AI car discovery.</p>
+            <ul class="tags"><li>OpenAI API</li><li>LLM</li><li>REST APIs</li></ul>
+            <span class="work-link"><ion-icon name="open-outline"></ion-icon>Open in ChatGPT</span>
+          </a>
+        </li>
+        <li class="project" data-category="professional" data-reveal>
+          <a href="https://oxygen.cwsystem.in/docs/" class="glass card work" target="_blank" rel="noopener" data-tilt="6">
+            <figure class="art" aria-hidden="true"><ion-icon name="layers-outline"></ion-icon><strong>80+</strong><span>components versioned</span></figure>
+            <div class="card-body"><h3>Oxygen design system versioning</h3><p>CarTrade Tech</p></div>
+            <p class="card-desc">Pioneered component-level versioning so each component updates independently — 40% less integration overhead across 5+ teams.</p>
+            <ul class="tags"><li>Design systems</li><li>Monorepo</li><li>React</li></ul>
+            <span class="work-link"><ion-icon name="open-outline"></ion-icon>View the docs</span>
+          </a>
+        </li>
+        <li class="project" data-category="professional" data-reveal>
+          <article class="glass card work" data-tilt="6">
+            <figure class="art" aria-hidden="true"><ion-icon name="flash-outline"></ion-icon><strong>2h → 15m</strong><span>template creation</span></figure>
+            <div class="card-body"><h3>Template automation system</h3><p>CarTrade Tech</p></div>
+            <p class="card-desc">Modular automation that removed 80–90% of duplicate JavaScript (1–2.5 MB saved per template) across 3 teams.</p>
+            <ul class="tags"><li>JavaScript</li><li>Automation</li><li>Performance</li></ul>
+          </article>
+        </li>
+      </ul>
+    </section>
 
-      </article>
+    <!-- RESUME -->
+    <section class="section" id="resume">
+      <h3 class="sub-title" data-reveal>Resume</h3>
 
-    </div>
+      <!-- career journey: a path that draws itself on scroll, lighting each stop -->
+      <div class="journey" data-journey>
+        <svg class="journey-svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="journey-grad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="1000">
+              <stop offset="0" stop-color="var(--teal)" />
+              <stop offset="1" stop-color="var(--violet)" />
+            </linearGradient>
+          </defs>
+          <path class="journey-track" />
+          <path class="journey-line" stroke="url(#journey-grad)" />
+        </svg>
+
+        <ol class="journey-list">
+          <li class="stop" data-stop>
+            <div class="stop-meta">
+              <p class="stop-when">2020 – 2024</p>
+              <p class="stop-kind"><ion-icon name="school-outline"></ion-icon>Education</p>
+              <p class="stop-sub">Bhopal, Madhya Pradesh</p>
+            </div>
+            <span class="stop-dot" aria-hidden="true"></span>
+            <div class="glass stop-card">
+              <h4>B.Tech, Computer Science (AI &amp; ML)</h4>
+              <p class="stop-org">Lakshmi Narain College of Technology &amp; Science</p>
+              <p class="stop-score"><strong>9.02</strong> CGPA out of 10</p>
+            </div>
+          </li>
+
+          <li class="stop" data-stop>
+            <div class="stop-meta">
+              <p class="stop-when">Nov 2024 – Apr 2026</p>
+              <p class="stop-kind"><ion-icon name="briefcase-outline"></ion-icon>CarTrade Tech</p>
+              <p class="stop-sub">1 yr 5 mos, Navi Mumbai</p>
+            </div>
+            <span class="stop-dot" aria-hidden="true"></span>
+            <div class="glass stop-card">
+              <h4>Associate Software Development Engineer</h4>
+              <ul>
+                <li>Pioneered component-level versioning in the Oxygen design system for <strong>80+ components</strong>, cutting integration overhead by <strong>40%</strong> across 5+ teams.</li>
+                <li>Built a template automation system that removed <strong>80–90% of duplicate JavaScript</strong> and cut template creation from <strong>2 hours to 15 minutes</strong>.</li>
+                <li>Shipped <strong>40+ skin ad campaigns</strong> with advanced CSS animation and vanilla JS template injection, tested cross-browser on BrowserStack.</li>
+                <li>Built an internal ops panel with AWS S3 asset management and RBAC for <strong>50+ people</strong>, taking asset deployment from 2 days to real time.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="stop current" data-stop>
+            <div class="stop-meta">
+              <p class="stop-when">Apr 2026 – present</p>
+              <p class="stop-kind"><ion-icon name="briefcase-outline"></ion-icon>CarTrade Tech</p>
+              <!-- <p class="stop-sub"><span class="stop-pill"><ion-icon name="trending-up-outline"></ion-icon>Promoted in 18 months</span></p> -->
+            </div>
+            <span class="stop-dot" aria-hidden="true"></span>
+            <div class="glass stop-card">
+              <div class="stop-head"><h4>Software Development Engineer I</h4><span class="stop-now">Now</span></div>
+              <ul>
+                <li>Built <strong>design to code</strong>: designers work in Figma and developers generate the page through an LLM like Claude in one go. A custom wrapper over MUI delivers <strong>85–90% accuracy</strong> and saves <strong>60–70% of UI effort</strong> across the company.</li>
+                <li>Wrote an <strong>MUI-style component library for React Native</strong> from scratch, covering structure, theme, palette and components, with the same 85–90% design-to-code accuracy.</li>
+                <li>Engineered CarWale's production <strong>ChatGPT integration</strong>, the interface layer between OpenAI's LLM and live inventory, powering AI car discovery for <strong>millions of users</strong>.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section class="section" id="certificates">
+      <h3 class="sub-title" data-reveal>Certificates</h3>
+
+      <div class="certs-wrap" id="certs-list" data-certs data-reveal>
+        <ul class="certs">
+          <li>
+            <a class="glass cert" href="https://drive.google.com/file/d/12KGMY2wj78EvhsFMpksQUBqeT8x7BILO/view?usp=sharing" target="_blank" rel="noopener">
+              <figure><img src="./assets/images/blog-2.png" alt="" loading="lazy"></figure>
+              <p class="cert-meta">TCS, Apr 2023</p>
+              <h3>TCS National Qualifier Test</h3>
+              <p>One test for roles across TCS, Jio, TVS, Asian Paints and more.</p>
+            </a>
+          </li>
+          <li>
+            <a class="glass cert" href="https://drive.google.com/file/d/1nBNpyHlAJfZPWZGsjuwv4-3u9KCkfsWG/view?usp=sharing" target="_blank" rel="noopener">
+              <figure><img src="./assets/images/blog-3.png" alt="" loading="lazy"></figure>
+              <p class="cert-meta">Cisco Networking Academy, Mar 2023</p>
+              <h3>Introduction to Packet Tracer</h3>
+              <p>Completed the Cisco Networking Academy Packet Tracer course.</p>
+            </a>
+          </li>
+          <li>
+            <a class="glass cert" href="https://drive.google.com/file/d/1Z8QsDTx9DjygfGWO6I_axRBxqmEYnX8X/view?usp=sharing" target="_blank" rel="noopener">
+              <figure><img src="./assets/images/blog-4.png" alt="" loading="lazy"></figure>
+              <p class="cert-meta">Cisco Networking Academy, Dec 2022</p>
+              <h3>Introduction to Networks</h3>
+              <p>Student-level credential for CCNAv7: Introduction to Networks.</p>
+            </a>
+          </li>
+          <li>
+            <a class="glass cert" href="https://smartinternz.com/internships/salesforce_certificates/bcfaf6aa2ba8e45ff2d75a8071f0d8da" target="_blank" rel="noopener">
+              <figure><img src="./assets/images/blog-5.png" alt="" loading="lazy"></figure>
+              <p class="cert-meta">Salesforce, Oct – Dec 2022</p>
+              <h3>Salesforce Developer Virtual Internship</h3>
+              <p>Trailhead modules plus Apex Specialist and Process Automation superbadges.</p>
+            </a>
+          </li>
+          <li>
+            <a class="glass cert" href="https://www.hackerrank.com/certificates/dc96dcdce03b" target="_blank" rel="noopener">
+              <figure><img src="./assets/images/blog-6.jpg" alt="" loading="lazy"></figure>
+              <p class="cert-meta">HackerRank, Jul 2021</p>
+              <h3>Python (Basic)</h3>
+              <p>Types, control flow, strings, collections, modularity and classes.</p>
+            </a>
+          </li>
+          <li>
+            <a class="glass cert" href="https://www.hackerrank.com/certificates/2074bdbe4756" target="_blank" rel="noopener">
+              <figure><img src="./assets/images/blog-1.png" alt="" loading="lazy"></figure>
+              <p class="cert-meta">HackerRank, Aug 2021</p>
+              <h3>Problem Solving (Basic)</h3>
+              <p>Core data structures and algorithms: arrays, strings, sorting, searching.</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="certs-more">
+        <button class="btn btn-ghost" data-certs-btn aria-expanded="false" aria-controls="certs-list">
+          <span>Show all certificates</span><ion-icon name="chevron-down-outline"></ion-icon>
+        </button>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <h3 class="sub-title" data-reveal>Let's build something</h3>
+
+      <div class="contact-grid">
+        <form class="glass panel form" action="https://formsubmit.co/aryanayush012@gmail.com" method="POST" data-form data-reveal>
+          <div class="field">
+            <input id="f-name" type="text" name="fullname" placeholder=" " required autocomplete="name">
+            <label for="f-name">Full name</label>
+          </div>
+          <div class="field">
+            <input id="f-email" type="email" name="email" placeholder=" " required autocomplete="email">
+            <label for="f-email">Email address</label>
+          </div>
+          <div class="field">
+            <textarea id="f-msg" name="message" placeholder=" " rows="5" required></textarea>
+            <label for="f-msg">Your message</label>
+          </div>
+          <button class="btn btn-primary" type="submit" disabled data-form-btn>
+            <ion-icon name="paper-plane-outline"></ion-icon><span>Send message</span>
+          </button>
+        </form>
+
+        <div class="contact-side" data-reveal>
+          <ul class="glass panel contacts">
+            <li><ion-icon name="mail-outline"></ion-icon><div><span>Email</span><a href="mailto:aryanayush012@gmail.com">aryanayush012@gmail.com</a></div></li>
+            <li><ion-icon name="call-outline"></ion-icon><div><span>Phone</span><a href="tel:+917808936924">+91 78089 36924</a></div></li>
+            <li><ion-icon name="location-outline"></ion-icon><div><span>Location</span><address>Navi Mumbai, Maharashtra, India</address></div></li>
+            <li><ion-icon name="logo-linkedin"></ion-icon><div><span>LinkedIn</span><a href="https://www.linkedin.com/in/aryanayush012/" target="_blank" rel="noopener">in/aryanayush012</a></div></li>
+            <li><ion-icon name="logo-github"></ion-icon><div><span>GitHub</span><a href="https://github.com/aryanayush012" target="_blank" rel="noopener">aryanayush012</a></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
   </main>
 
+  <footer class="footer">
+    <p>Designed &amp; built by Ayush Aryan with plain HTML, CSS and JavaScript.</p>
+    <a href="#top" class="to-top" aria-label="Back to top"><ion-icon name="arrow-up-outline"></ion-icon></a>
+  </footer>
 
+  <!-- floating quick contact -->
+  <div class="fab" data-fab>
+    <div class="fab-menu" id="fab-menu">
+      <a class="glass fab-item" href="tel:+917808936924"><ion-icon name="call-outline"></ion-icon><span>Call me</span></a>
+      <a class="glass fab-item" href="mailto:aryanayush012@gmail.com"><ion-icon name="mail-outline"></ion-icon><span>Email me</span></a>
+    </div>
+    <button class="fab-btn" aria-expanded="false" aria-controls="fab-menu" aria-label="Quick contact" data-fab-btn>
+      <ion-icon name="chatbubble-ellipses-outline" class="i-open"></ion-icon>
+      <ion-icon name="close-outline" class="i-close"></ion-icon>
+    </button>
+  </div>
 
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  <script src="./assets/js/script.js" defer></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
