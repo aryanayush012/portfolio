@@ -306,19 +306,20 @@ new ResizeObserver(() => {
 
 
 /* ---------- resume download ---------- */
+// served from Google Drive: replace the PDF there via "Manage versions" and this link stays the same
+const RESUME_URL = 'https://drive.google.com/uc?export=download&id=1uDGgRmWmriMv93JCAr1dMGP1mp0PPkB9';
 const dlBtn = $('[data-download]');
+const dlLabel = $('.dl-label', dlBtn);
+const dlText = dlLabel.textContent;
 dlBtn.addEventListener('click', () => {
   if (dlBtn.classList.contains('loading')) return;
-  const label = $('.dl-label', dlBtn);
   dlBtn.classList.add('loading');
 
-  const a = document.createElement('a');
-  a.href = './assets/images/Ayush_Aryan.pdf';
-  a.download = 'Ayush_Aryan_Resume.pdf';
-  a.click();
+  // Drive answers with a file attachment, so the browser downloads without leaving the page
+  location.href = RESUME_URL;
 
-  setTimeout(() => { dlBtn.classList.add('done'); label.textContent = 'Downloaded'; }, 900);
-  setTimeout(() => { dlBtn.classList.remove('loading', 'done'); label.textContent = 'Download résumé'; }, 4000);
+  setTimeout(() => { dlBtn.classList.add('done'); dlLabel.textContent = 'Downloaded'; }, 900);
+  setTimeout(() => { dlBtn.classList.remove('loading', 'done'); dlLabel.textContent = dlText; }, 4000);
 });
 
 
